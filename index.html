@@ -69,5 +69,63 @@
   </script>
 </head>
 
+<body class="lato tracking-wider">
+    <header class="relative">
+      <!-- Nav Bar Container -->
+      <nav class="container h-[90px] lg:my-12">
+        <!-- Main Container -->
+        <div class="w-full h-full flex justify-between items-center lg:text-white lg:bg-color-primary lg:rounded-full">
+          <!-- Nav links -->
+          <div class="xsm:hidden lg:block flex-1 pl-5">
+            <ul class="flex items-center flex-wrap">
+              <li><a
+                  class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
+                  href="#">Home</a></li>
+              <li><a
+                  class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
+                  href="#">About US</a></li>
+              <li><a
+                  class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
+                  href="#">Shop</a></li>
+              <li>
+                <a class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
+                  href="#">All Fruits</a>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Logo Image -->
+          <div class="flex-1">
+            <ul class="flex items-center">
+
+              <li>
+                <a class="m-4" href=""><img class="sm:w-8 sm:h-8 lg:w-full lg:h-full" src="./images/logo.png"
+                    alt="" /></a>
+              </li>
+              <!-- Link -->
+              <li>
+                <a class="m-4 sm:text-2xl md:text-[40px] font-bold" href="#">
+                  Fruit Burst
+                </a>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Mobile Navigation-->
+  
+          <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </div>
+  
+          <!-- Search Box Container -->
+          <div class="xsm:hidden lg:block flex justify-end pr-5">
+            <div class="flex items-center w-[400px] m-auto bg-white rounded-full px-6 py-4">
+              <input class="flex-1 border-none outline-none placeholder:text-light-dark" type="text"
+                placeholder="Search here" />
+              <i class="fa-solid fa-search text-dark cursor-pointer"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
 
 </html>
