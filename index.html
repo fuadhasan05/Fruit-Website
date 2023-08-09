@@ -2,130 +2,272 @@
 <html lang="en" data-theme="light">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fruit Brust Website</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Brust Website</title>
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Favicon Section -->
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <!-- Favicon Section -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
 
-  <!-- Font Awesome CDN Section -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome CDN Section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Google Font Section -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"/>
+    <!-- Google Font Section -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind & Daisy UI CDN Section -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind & Daisy UI CDN Section -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
 
-  <!-- Tailwind Custom CSS -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            "color-primary": "#F85559",
-            "color-secondary": "#",
-          },
-          container: {
-            center: true,
-            padding: {
-              xsm: "5px",
-              DEFAULT: "20px",
-              // Medium to up
-              md: "50px",
+    <!-- Tailwind Custom CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "color-primary": "#F85559",
+                        "color-secondary": "#",
+                    },
+                    container: {
+                        center: true,
+                        padding: {
+                            xsm: "5px",
+                            DEFAULT: "20px",
+                            // Medium to up
+                            md: "50px",
+                        },
+                    },
+                    screens: {
+                        'xsm': '400px',
+                        // For Screen Mobile 4xl
+                        // => @media (min-width: 400px) { ... }
+
+                        'sm': '640px',
+                        // => @media (min-width: 640px) { ... }
+
+                        'md': '768px',
+                        // => @media (min-width: 768px) { ... }
+
+                        'lg': '1024px',
+                        // => @media (min-width: 1024px) { ... }
+
+                        'xl': '1280px',
+                        // => @media (min-width: 1280px) { ... }
+
+                        '2xl': '1536px',
+                        // => @media (min-width: 1536px) { ... }
+                    }
+                },
             },
-          },
-          screens: {
-            'xsm': '400px',
-            // For Screen Mobile 4xl
-            // => @media (min-width: 400px) { ... }
-
-            'sm': '640px',
-            // => @media (min-width: 640px) { ... }
-
-            'md': '768px',
-            // => @media (min-width: 768px) { ... }
-
-            'lg': '1024px',
-            // => @media (min-width: 1024px) { ... }
-
-            'xl': '1280px',
-            // => @media (min-width: 1280px) { ... }
-
-            '2xl': '1536px',
-            // => @media (min-width: 1536px) { ... }
-          }
-        },
-      },
-    };
-  </script>
+        };
+    </script>
 </head>
 
 <body class="lato tracking-wider">
     <header class="relative">
-      <!-- Nav Bar Container -->
-      <nav class="container h-[90px] lg:my-12">
-        <!-- Main Container -->
-        <div class="w-full h-full flex justify-between items-center lg:text-white lg:bg-color-primary lg:rounded-full">
-          <!-- Nav links -->
-          <div class="xsm:hidden lg:block flex-1 pl-5">
-            <ul class="flex items-center flex-wrap">
-              <li><a
-                  class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
-                  href="#">Home</a></li>
-              <li><a
-                  class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
-                  href="#">About US</a></li>
-              <li><a
-                  class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
-                  href="#">Shop</a></li>
-              <li>
-                <a class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
-                  href="#">All Fruits</a>
-              </li>
-            </ul>
-          </div>
-  
-          <!-- Logo Image -->
-          <div class="flex-1">
-            <ul class="flex items-center">
+        <!-- Nav Bar Container -->
+        <nav class="container h-[90px] lg:my-12">
+            <!-- Main Container -->
+            <div
+                class="w-full h-full flex justify-between items-center lg:text-white lg:bg-color-primary lg:rounded-full">
+                <!-- Nav links -->
+                <div class="xsm:hidden lg:block flex-1 pl-5">
+                    <ul class="flex items-center flex-wrap">
+                        <li><a class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
+                                href="#">Home</a></li>
+                        <li><a class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
+                                href="#">About US</a></li>
+                        <li><a class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
+                                href="#">Shop</a></li>
+                        <li>
+                            <a class="m-4 text-lg font-medium hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-indigo-500 transitio ease-in duration-200"
+                                href="#">All Fruits</a>
+                        </li>
+                    </ul>
+                </div>
 
-              <li>
-                <a class="m-4" href=""><img class="sm:w-8 sm:h-8 lg:w-full lg:h-full" src="./images/logo.png"
-                    alt="" /></a>
-              </li>
-              <!-- Link -->
-              <li>
-                <a class="m-4 sm:text-2xl md:text-[40px] font-bold" href="#">
-                  Fruit Burst
-                </a>
-              </li>
-            </ul>
-          </div>
-  
-          <!-- Mobile Navigation-->
-  
-          <div id="hamburger" class="lg:hidden cursor-pointer z-50">
-            <i class="fa-solid fa-bars text-xl"></i>
-          </div>
-  
-          <!-- Search Box Container -->
-          <div class="xsm:hidden lg:block flex justify-end pr-5">
-            <div class="flex items-center w-[400px] m-auto bg-white rounded-full px-6 py-4">
-              <input class="flex-1 border-none outline-none placeholder:text-light-dark" type="text"
-                placeholder="Search here" />
-              <i class="fa-solid fa-search text-dark cursor-pointer"></i>
+                <!-- Logo Image -->
+                <div class="flex-1">
+                    <ul class="flex items-center">
+
+                        <li>
+                            <a class="m-4" href=""><img class="sm:w-8 sm:h-8 lg:w-full lg:h-full"
+                                    src="./images/logo.png" alt="" /></a>
+                        </li>
+                        <!-- Link -->
+                        <li>
+                            <a class="m-4 sm:text-2xl md:text-[40px] font-bold" href="#">
+                                Fruit Burst
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Navigation-->
+
+                <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </div>
+
+                <!-- Search Box Container -->
+                <div class="xsm:hidden lg:block flex justify-end pr-5">
+                    <div class="flex items-center w-[400px] m-auto bg-white rounded-full px-6 py-4">
+                        <input class="flex-1 border-none outline-none placeholder:text-light-dark" type="text"
+                            placeholder="Search here" />
+                        <i class="fa-solid fa-search text-dark cursor-pointer"></i>
+                    </div>
+                </div>
             </div>
-          </div>
+        </nav>
+
+        <!-- Banner Container -->
+        <div class="container text-white">
+            <div class="carousel w-full h-[40vh] lg:h-[60vh] rounded-lg">
+
+                <div id="slide1" class="carousel-item relative w-full">
+                    <!-- Banner Image -->
+                    <div class="w-full h-full banner1 bg-no-repeat bg-cover bg-center"></div>
+                    <!-- Banner Text -->
+                    <div class="absolute text-center w-full h-full flex flex-col justify-center items-center">
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 font-extrabold">
+                            Exotic tastes at your <br />
+                            doorstep
+                        </h1>
+                        <p class="text-lg md:text-xl font-medium mb-8">
+                            We supply highly quality organic products
+                        </p>
+                        <button
+                            class="bg-color-primary text-xl font-extrabold px-5 py-3 md:px-7 md:py-5 rounded-lg hover:opacity-90 transition ease-in duration-200">
+                            Shop Now
+                        </button>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+
+                <!-- Slide Two -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <!-- Banner Img -->
+                    <div class="w-full h-full banner2 bg-no-repeat bg-cover bg-center"></div>
+
+                    <!-- Banner Text -->
+                    <div class="absolute text-center w-full h-full flex flex-col justify-center items-center">
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 font-extrabold">
+                            Exotic tastes at your <br />
+                            doorstep
+                        </h1>
+                        <p class="text-lg md:text-xl font-medium mb-8">
+                            We supply highly quality organic products
+                        </p>
+                        <button
+                            class="bg-color-primary text-xl font-extrabold px-5 hover:opacity-90 transition ease-in duration-200 py-3 md:px-7 md:py-5 rounded-lg">
+                            Shop Now
+                        </button>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+
+                <!-- Slide Three -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <!-- Banner Image -->
+                    <div class="w-full h-full banner3 bg-no-repeat bg-cover bg-center"></div>
+
+                    <!-- Banner Text -->
+                    <div class="absolute text-center w-full h-full flex flex-col justify-center items-center">
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 font-extrabold">
+                            Exotic tastes at your <br />
+                            doorstep
+                        </h1>
+                        <p class="text-lg md:text-xl font-medium mb-8">
+                            We supply highly quality organic products
+                        </p>
+                        <button
+                            class="bg-color-primary text-xl font-extrabold hover:opacity-90 transition ease-in duration-200 px-5 py-3 md:px-7 md:py-5 rounded-lg">
+                            Shop Now
+                        </button>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+
+                <!-- Slide Four -->
+                <div id="slide4" class="carousel-item relative w-full">
+                    <!-- Banner Image -->
+                    <div class="w-full h-full banner4 bg-no-repeat bg-cover bg-center"></div>
+
+                    <!-- Banner Text -->
+                    <div class="absolute text-center w-full h-full flex flex-col justify-center items-center">
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 font-extrabold">
+                            Exotic tastes at your <br />
+                            doorstep
+                        </h1>
+                        <p class="text-lg md:text-xl font-medium mb-8">
+                            We supply highly quality organic products
+                        </p>
+                        <button
+                            class="bg-color-primary text-xl font-extrabold hover:opacity-90 transition ease-in duration-200 px-5 py-3 md:px-7 md:py-5 rounded-lg">
+                            Shop Now
+                        </button>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
+        <!-- Banner Fruit Section -->
+        <div class="hidden lg:block container relative bottom-24">
+            <div
+                class="w-4/5 m-auto bg-white rounded-lg shadow-xl px-14 py-10 hover:shadow-2xl transition ease-in duration-200">
+                <!-- Grid (USE) & Flex Container -->
+                <div class="grid grid-cols-5 items-center">
+                    <!-- Flex 1 -->
+                    <div class="flex flex-col gap-4 items-center">
+                        <img class="w-auto h-[112px]" src="./images/fruit1.png" alt="" />
+                        <p class="text--light-dark text-xl font-medium">Strawberry</p>
+                    </div>
+                    <!-- Flex 2 -->
+                    <div class="flex flex-col gap-4 items-center">
+                        <img class="w-auto h-[112px]" src="./images/fruit2.png" alt="" />
+                        <p class="text--light-dark text-xl font-medium">Orange</p>
+                    </div>
+                    <!-- Flex 3 -->
+                    <div class="flex flex-col gap-4 items-center">
+                        <img class="w-auto h-[112px]" src="./images/fruit3.png" alt="" />
+                        <p class="text--light-dark text-xl font-medium">Mango</p>
+                    </div>
+                    <!-- Flex 4 -->
+                    <div class="flex flex-col gap-4 items-center">
+                        <img class="w-auto h-[112px]" src="./images/fruit4.png" alt="" />
+                        <p class="text--light-dark text-xl font-medium">Strawberry</p>
+                    </div>
+                    <!-- Flex 5 -->
+                    <div class="flex flex-col gap-4 items-center">
+                        <img class="w-auto h-[112px]" src="./images/fruit5.png" alt="" />
+                        <p class="text--light-dark text-xl font-medium">Mango</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
 
 </html>
